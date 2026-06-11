@@ -1,0 +1,12 @@
+// Full Adder Netlist
+// Inputs: A, B, Cin
+// Outputs: Sum, Cout
+INPUT A, B, Cin;
+OUTPUT Sum, Cout;
+WIRE s1, c1, c2;
+
+XOR g1 (A, B) -> s1;
+XOR g2 (s1, Cin) -> Sum;
+AND g3 (A, B) -> c1;
+AND g4 (s1, Cin) -> c2;
+OR  g5 (c1, c2) -> Cout;

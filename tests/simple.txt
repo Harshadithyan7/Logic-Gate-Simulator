@@ -1,0 +1,8 @@
+// Simple combinational circuit
+// Formula: Y = (A AND B) OR C
+INPUT A, B, C;
+OUTPUT Y;
+WIRE w1;
+
+AND g1 (A, B) -> w1;
+OR  g2 (w1, C) -> Y;

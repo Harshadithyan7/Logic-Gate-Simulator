@@ -1,0 +1,9 @@
+// Circuit with a feedback loop (latch/oscillator)
+// g1 and g2 form a feedback loop: w1 depends on w2, w2 depends on w1
+INPUT A;
+OUTPUT Y;
+WIRE w1, w2;
+
+AND g1 (A, w2) -> w1;
+NOT g2 (w1) -> w2;
+OR  g3 (w2, A) -> Y;
